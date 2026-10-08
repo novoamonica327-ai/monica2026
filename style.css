@@ -1,0 +1,249 @@
+/* ==========================================================================
+   1. ESTILOS GENERALES DEL SITIO
+   ========================================================================== */
+body {
+    background-color: #f4f6f9; /* Fondo gris claro neutral para el sitio */
+}
+
+/* ==========================================================================
+   2. ESTILOS DE LA BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================================================== */
+
+/* Fondo negro con efecto de vidrio esmerilado (Transparencia + Blur) */
+.custom-navbar {
+    background-color: rgba(17, 17, 17, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo e interacción para el Logotipo */
+.custom-logo {
+    color: #ffffff !important;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.custom-logo:hover {
+    transform: scale(1.05);
+    color: #2ec4b6 !important; /* Cambia a verde esmeralda al pasar el mouse */
+}
+
+/* Estilo base de los enlaces del menú */
+.custom-nav-link {
+    color: #b3b3b3 !important;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 12px !important;
+    transition: color 0.3s ease !important;
+}
+
+.custom-nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Línea expansiva inferior verde en la navegación (Efecto Hover) */
+.custom-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #2ec4b6; /* Verde esmeralda */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.custom-nav-link:hover::after {
+    width: 80%; /* La línea cubre el 80% del ancho del texto */
+}
+
+.custom-nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Menú desplegable oscuro (Dropdown) */
+.custom-dropdown-menu {
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 8px !important;
+    margin-top: 10px !important;
+}
+
+.custom-dropdown-item {
+    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 8px 20px !important;
+}
+
+.custom-dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   3. ESTILOS DE LAS 12 TARJETAS (CARDS)
+   ========================================================================== */
+
+/* Tarjeta base con degradado oscuro de fondo */
+.custom-card {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    background: linear-gradient(145deg, #212529, #111416) !important;
+}
+
+/* Elevación 3D y brillo de borde en la tarjeta al pasar el cursor */
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6) !important;
+    border: 1px solid rgba(46, 196, 182, 0.3) !important; /* Brillo verde sutil */
+}
+
+/* Recorte para el efecto de zoom de la foto */
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animación de zoom suave en las imágenes */
+.custom-card-img {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.custom-card:hover .custom-card-img {
+    transform: scale(1.08); /* Aumenta un 8% su tamaño */
+}
+
+/* Botón personalizado verde (Estado Normal sin rellenar) */
+.custom-card-btn {
+    background-color: transparent !important;
+    border-color: #2ec4b6 !important; /* Verde esmeralda */
+    color: #2ec4b6 !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Relleno e iluminación cuando pasas el mouse directamente encima del botón */
+.custom-card-btn:hover {
+    background-color: #2ec4b6 !important;
+    color: #111111 !important; /* El texto cambia a negro para leerse bien */
+    border-color: #2ec4b6 !important;
+    box-shadow: 0 0 15px rgba(46, 196, 182, 0.4); /* Resplandor neón */
+}
+
+/* Efecto cuando pasas el cursor sobre la tarjeta general (El botón avisa iluminándose) */
+.custom-card:hover .custom-card-btn {
+    border-color: #38ef7d !important; /* Pasa a un verde más claro/vivo */
+    color: #38ef7d !important;
+}
+
+/* Cuando apuntas directamente al botón estando ya la tarjeta activa */
+.custom-card:hover .custom-card-btn:hover {
+    background-color: #38ef7d !important;
+    color: #111111 !important;
+    border-color: #38ef7d !important;
+}
+/* ==========================================================================
+   4. ESTILOS PARA EL FORMULARIO DE DOMICILIOS
+   ========================================================================== */
+
+/* Contenedor blanco del formulario */
+.form-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos de las subsecciones dentro del formulario */
+.form-container h5 {
+    color: #212529;
+    font-weight: 600;
+    border-bottom: 2px solid #f4f6f9;
+    padding-bottom: 8px;
+}
+
+/* Efecto de enfoque (Focus) en los campos de texto y selectores */
+.form-container .form-control:focus, 
+.form-container .form-select:focus {
+    border-color: #2ec4b6; /* Borde verde esmeralda al escribir */
+    box-shadow: 0 0 0 0.25rem rgba(46, 196, 182, 0.15); /* Resplandor sutil */
+}
+
+/* Botón de envío en estado normal */
+.custom-form-btn {
+    background-color: #2ec4b6 !important; /* Verde esmeralda */
+    border-color: #2ec4b6 !important;
+    color: #111111 !important; /* Texto oscuro para buen contraste */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Botón de envío al pasar el cursor por encima (Hover) */
+.custom-form-btn:hover {
+    background-color: #38ef7d !important; /* Verde más brillante y vivo */
+    border-color: #38ef7d !important;
+    color: #111111 !important;
+    box-shadow: 0 5px 15px rgba(56, 239, 125, 0.4); /* Brillo de elevación */
+    transform: translateY(-1px); /* Efecto leve de empuje hacia arriba */
+}
+
+/* Asegura el diseño correcto de los mensajes de error de Bootstrap */
+.form-container .invalid-feedback {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+/* ==========================================================================
+   5. SECCIÓN DE CONTACTO CON CONTORNO NEGRO
+   ========================================================================== */
+
+/* Contenedor principal con contorno negro grueso */
+.contact-container {
+    background-color: #ffffff;
+    border: 4px solid #111111; /* Contorno negro grueso */
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Tarjeta de información lateral (Fondo Negro) */
+.contact-info-card {
+    background-color: #111111;
+    color: #ffffff;
+    height: 100%;
+}
+
+/* Campos del formulario de contacto */
+.contact-container .form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Enfoque de los campos con estilo verde esmeralda */
+.contact-container .form-control:focus {
+    border-color: #2ec4b6;
+    box-shadow: 0 0 0 0.25rem rgba(46, 196, 182, 0.15);
+    color: #111111;
+}
+
+/* Ajuste del marcador de mapa responsivo */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    border-radius: 12px;
+    border: 2px solid #111111;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- LINK BOOTSTRAP -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link rel="style" href="style.css">
+    </head>   <!-- Barra de navegación principal -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow custom-navbar">
+        <div class="container-fluid px-4">
+            
+            <!-- Logotipo -->
+            <a class="navbar-brand fw-bold fs-4 custom-logo" href="#">MiSitio</a>
+            
+            <!-- Botón menú hamburguesa para móviles -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Contenedor de los enlaces de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active custom-nav-link" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="#catalogo">Catalogo</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="#domicilios">domicilios</a>
+                    </li>
+                    
+                  
+                    
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="IMG/Gemini_Generated_Image_ami7ttami7ttami7.jpg" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="IMG/Gemini_Generated_Image_pvrn28pvrn28pvrn.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="IMG/Gemini_Generated_Image_ujfl71ujfl71ujfl.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+<body>
+    <style>
+        /* Estilos base de la tarjeta */
+        .custom-card {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+            border: 1px solid rgba(247, 247, 247, 0.05) !important;
+            background: linear-gradient(145deg, #ffffff, #f6f7f8) !important;
+        }
+        .custom-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid rgba(46, 196, 182, 0.3) !important;
+        }
+
+        /* Recorte y zoom de la imagen */
+        .card-img-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+        .custom-card-img {
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .custom-card:hover .custom-card-img {
+            transform: scale(1.08);
+        }
+
+        /* BOTÓN VER MÁS - ESTADO NORMAL (VERDE ESMERALDA) */
+        .custom-card-btn {
+            background-color: transparent !important;
+            border-color: #2ec4b6 !important;
+            color: #2ec4b6 !important;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* BOTÓN VER MÁS - AL PASAR EL CURSOR DIRECTAMENTE EN EL BOTÓN */
+        .custom-card-btn:hover {
+            background-color: #2ec4b6 !important;
+            color: #111111 !important;
+            border-color: #2ec4b6 !important;
+            box-shadow: 0 0 15px rgba(46, 196, 182, 0.5);
+        }
+
+        /* Animación cuando pasas el mouse por encima de la tarjeta general */
+        .custom-card:hover .custom-card-btn {
+            border-color: #38ef7d !important;
+            color: #38ef7d !important;
+        }
+        .custom-card:hover .custom-card-btn:hover {
+            background-color: #38ef7d !important;
+            color: #111111 !important;
+            border-color: #38ef7d !important;
+        }
+    </style>
+    
+
+     <!-- SECCIÓN DE TARJETAS (12 Tarjetas organizadas en 2 filas de 6) -->
+    <div class="container-fluid px-5 py-5" id="catalogo">
+        
+        <div class="row mb-5 text-center">
+            <div class="col-12">
+                <h2 class="fw-bold text-dark">Nuestro Catálogo Completo</h2>
+                <p class="text-muted">Explora nuestrOS PRODUCTOS.</p>
+            </div>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 g-3">
+            
+            <!-- ====== FILA 1 ====== -->
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/ACEITE.webp" class="card-img-top custom-card-img" alt="Diseño Web">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate"> ACEITE</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$13.000</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/ARROZ.webp" class="card-img-top custom-card-img" alt="Desarrollo">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate"> ARROZ</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$2.300</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/ATUN.jpg" class="card-img-top custom-card-img" alt="Marketing">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate"> ATUN </h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$4.900</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/bananos-1.jpg" class="card-img-top custom-card-img" alt="SEO">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate"> BANANOS </h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$3.500</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+        
+
+            <!-- Tarjeta 5 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/CAFE.jpg" class="card-img-top custom-card-img" alt="Analítica">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate"> CAFE</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$20.100</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/FRIJOLES.jpg" class="card-img-top custom-card-img" alt="Soporte">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate"> FRIJOLES </h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$5.800</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== FILA 2 ====== -->
+            <!-- Tarjeta 7 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/GASEOSA-COLOMBIANA_F.webp" class="card-img-top custom-card-img" alt="E-commerce">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate"> GASEOSA COLOMBIANA</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$4.600</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 8 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/LECHE.webp" class="card-img-top custom-card-img" alt="Ciberseguridad">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate">LECHE</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$3.100</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 9 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/VINO.webp" class="card-img-top custom-card-img" alt="Cloud">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate">VINO</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$21.500</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 10 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/huevos-aa-cod-171.webp" class="card-img-top custom-card-img" alt="Automatización">
+                    </div>
+                    <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate">HUEVOS*30</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$12.000</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 11 -->
+            <div class="col">
+                <div class="card h-100 text-bg-dark border-0 shadow overflow-hidden custom-card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/MANZANA.avif" class="card-img-top custom-card-img" alt="Apps Móviles">
+                    </div>
+                      <div class="card-body d-flex flex-column p-3">
+                        <h6 class="card-title fw-bold text-truncate">MANZANAS</h6>
+                        <p class="card-text text-secondary-emphasis small flex-grow-1" style="font-size: 0.8rem;">$5.400</p>
+                        <a href="#" class="btn btn-sm w-100 mt-2 custom-card-btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="container py-5" id="domicilios"> 
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            
+            <div class="form-container p-4 p-sm-5">
+                <!-- Encabezado -->
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-dark">Solicitar Domicilio</h2>
+                    <p class="text-muted">Ingresa tus datos de envío para procesar tu pedido inmediatamente.</p>
+                </div>
+
+                <!-- Formulario con validación nativa de Bootstrap -->
+                <form class="needs-validation" novalidate>
+                    
+                    <!-- Sección 1: Datos Personales -->
+                    <h5 class="mb-3 text-dark fw-semibold border-bottom pb-2">1. Datos Personales</h5>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez" required>
+                            <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="telefono" class="form-label">Número de teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Ej. 3001234567" required>
+                            <div class="invalid-feedback">Se requiere un teléfono de contacto válido.</div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 2: Dirección de Envío -->
+                    <h5 class="mb-3 text-dark fw-semibold border-bottom pb-2">2. Dirección de Entrega</h5>
+                    <div class="row g-3 mb-4">
+                        <div class="col-12">
+                            <label for="direccion" class="form-label">Dirección principal</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Calle, Carrera o Avenida # Nro" required>
+                            <div class="invalid-feedback">Por favor, introduce tu dirección de domicilio.</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="interior" class="form-label">Apto, Interior, Bloque (Opcional)</label>
+                            <input type="text" class="form-control" id="interior" placeholder="Ej. Apto 402, Torre 3">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="barrio" class="form-label">Barrio / Sector</label>
+                            <input type="text" class="form-control" id="barrio" placeholder="Ej. El Poblado" required>
+                            <div class="invalid-feedback">Por favor, especifica el barrio.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="notas" class="form-label">Instrucciones de entrega (Opcional)</label>
+                            <textarea class="form-control" id="notas" rows="2" placeholder="Ej. Dejar en portería, tocar el timbre fuerte, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Sección 3: Método de Pago -->
+                    <h5 class="mb-3 text-dark fw-semibold border-bottom pb-2">3. Método de Pago</h5>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label for="metodoPago" class="form-label">Selecciona cómo deseas pagar</label>
+                            <select class="form-select" id="metodoPago" required>
+                                <option value="" selected disabled>Elegir opción...</option>
+                                <option value="efectivo">Efectivo contra entrega</option>
+                                <option value="datafono">Datafono (Tarjeta) contra entrega</option>
+                                <option value="transferencia">Transferencia bancaria / QR</option>
+                            </select>
+                            <div class="invalid-feedback">Selecciona un método de pago.</div>
+                        </div>
+                        <div class="col-md-6" id="contenedorCambio">
+                            <label for="cambio" class="form-label">¿Con cuánto vas a pagar? (Opcional)</label>
+                            <input type="text" class="form-control" id="cambio" placeholder="Ej. Pago con un billete de $50.000">
+                        </div>
+                    </div>
+
+                    <!-- Términos y Condiciones -->
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+                        <label class="form-check-label text-muted small" for="terminos">
+                            Acepto el uso de mis datos para la coordinación del envío del pedido.
+                        </label>
+                        <div class="invalid-feedback">Debes aceptar los términos antes de enviar.</div>
+                    </div>
+
+                    <!-- Botón de Envío -->
+                    <button class="btn btn-lg w-100 custom-form-btn shadow-sm" type="submit">Confirmar y Solicitar Domicilio</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+        <!-- SECCIÓN DE CONTACTO CON CONTORNO NEGRO -->
+    <div id="contacto" class="container py-5">
+        
+        <!-- ESTILOS CSS INCRUSTADOS PARA ESTA SECCIÓN -->
+        <style>
+            /* Contenedor principal con contorno negro grueso */
+            .contact-container {
+                background-color: #ffffff;
+                border: 4px solid #111111; /* Contorno negro solicitado */
+                border-radius: 16px;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+                overflow: hidden;
+            }
+
+            /* Tarjeta de información lateral derecha (Fondo Negro) */
+            .contact-info-card {
+                background-color: #111111;
+                color: #ffffff;
+                height: 100%;
+            }
+
+            /* Bordes de los campos del formulario */
+            .contact-container .form-control {
+                border: 2px solid #e2e8f0;
+                border-radius: 8px;
+                padding: 12px;
+                transition: all 0.3s ease;
+            }
+
+            /* Efecto cuando el usuario hace clic para escribir (Enfoque Verde) */
+            .contact-container .form-control:focus {
+                border-color: #2ec4b6;
+                box-shadow: 0 0 0 0.25rem rgba(46, 196, 182, 0.15);
+                color: #111111;
+            }
+
+            /* Contenedor del Mapa de Google Responsivo */
+            .map-responsive {
+                overflow: hidden;
+                padding-bottom: 56.25%;
+                position: relative;
+                height: 0;
+                border-radius: 12px;
+                border: 2px solid #111111;
+            }
+            .map-responsive iframe {
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+            }
+        </style>
+
+        <div class="row justify-content-center" id="contacto">
+            <div class="col-12 col-xl-11">
+                
+                <!-- Estructura del bloque con contorno negro -->
+                <div class="contact-container shadow-lg">
+                    <div class="row g-0">
+                        
+                        <!-- Columna Izquierda: Formulario de Mensaje -->
+                        <div class="col-lg-7 p-4 p-sm-5">
+                            <h3 class="fw-bold text-dark mb-2">Ponte en contacto</h3>
+                            <p class="text-muted mb-4">Escríbenos tu mensaje y te responderemos en menos de 24 horas hábiles.</p>
+                            
+                            <form class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="contact-name" class="form-label fw-semibold">Nombre</label>
+                                        <input type="text" class="form-control" id="contact-name" placeholder="Tu nombre" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="contact-email" class="form-label fw-semibold">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="contact-email" placeholder="correo@ejemplo.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="contact-subject" class="form-label fw-semibold">Asunto</label>
+                                        <input type="text" class="form-control" id="contact-subject" placeholder="¿En qué podemos ayudarte?" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="contact-message" class="form-label fw-semibold">Mensaje</label>
+                                        <textarea class="form-control" id="contact-message" rows="4" placeholder="Escribe aquí los detalles..." required></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <!-- Botón verde interactivo integrado en el HTML -->
+                                        <button type="submit" class="btn btn-lg w-100 custom-card-btn">Enviar Mensaje Directo</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Columna Derecha: Información y Mapa (Bloque Negro) -->
+                        <div class="col-lg-5 p-4 p-sm-5 contact-info-card d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="fw-bold text-white mb-4">Información de Soporte</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <span class="me-3 fs-5">📍</span> 
+                                        <span>Av. Principal #123, Of. 402</span>
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <span class="me-3 fs-5">📞</span> 
+                                        <span>+57 (300) 123-4567</span>
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <span class="me-3 fs-5">✉️</span> 
+                                        <span>soporte@misitio.com</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Mapa de Google integrado -->
+                            <div class="mt-2">
+                                <div class="map-responsive">
+                                   
+                                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4322524922472!2d-74.08876292418685!3d4.694713341707712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b25144634c9%3A0xaa39a3ad6b78b4cb!2sCentro%20Comercial%20Tit%C3%A1n%20Plaza!5e0!3m2!1ses-419!2sco!4v1791475551319!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- LINK BOOTSTRAP JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
